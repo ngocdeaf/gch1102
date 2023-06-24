@@ -1,0 +1,47 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<style>
+    .center-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+</style>
+
+<div class="center-form">
+    <form class="bg-light text-center col-md-8" action="/game/edit/{{game._id}}" method="post">
+        <div>
+            <h1 class="text text-primary">Edit Game</h1>
+        </div>
+        <div class="form-group mt-3">
+            <label class="text text-success">Name</label>
+            <input class="form-control" type="text" name="name" value="{{ game.name }}" required>
+        </div>
+        <div class="form-group mt-3">
+            <label class="text text-success">Category</label>
+            <input class="form-control" type="text" name="category" value="{{ game.category }}" required>
+        </div>
+        <div class="form-group mt-3">
+            <label class="text text-success">Quantity</label>
+            <input class="form-control" type="number" name="quantity" value="{{ game.quantity }}" required>
+        </div>
+        <div class="form-group mt-3">
+            <label class="text text-success">Price</label>
+            <input class="form-control" type="number" name="price" value="{{ game.price }}" required>
+        </div>
+        <div class="form-group mt-3">
+            <label class="text text-success">Image</label><br>
+            <img src="{{ game.image}}" width="200" height="200"><br>
+            <input class="form-control" type="text" name="image" value="{{ game.image }}" required>
+        </div>
+        <div class="form-group mt-3">
+            <a class="btn btn-secondary" href="/game"
+                onclick="return confirm('Unsaved Information will be lost!');">Cancel</a>
+            </a>
+            <input class="btn btn-danger" type="submit" value="Edit">
+        </div>
+</div>
+</form>

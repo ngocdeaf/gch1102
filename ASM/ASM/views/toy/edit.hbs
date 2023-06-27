@@ -9,7 +9,40 @@
         justify-content: center;
         min-height: 100vh;
     }
+
+    .navbar-custom {
+        background-color: #fdcc69;
+    }
+
+    body {
+        background-color: #f7f5eb;
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
 </style>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="/"><span>The Toy</span>Box</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" style="padding-right: 30px;" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/toy">Toy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/game">Game</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <div class="center-form">
     <form class="bg-light text-center col-md-8" action="/toy/edit/{{toy._id}}" method="post">
@@ -38,7 +71,7 @@
         </div>
         <div class="form-group mt-3">
             <label class="text text-success">Image</label><br>
-            <img src="{{ toy.image}}" width="200" height="200"><br>
+            <img src="{{ toy.image}}" width="300"><br>
             <input class="form-control" type="text" name="image" value="{{ toy.image }}" required>
         </div>
         <div class="form-group mt-3">

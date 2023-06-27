@@ -18,7 +18,7 @@ router.get('/add', (req, res) => {
 })
 
 router.post('/add', async (req, res) => {
-    const { name, category, quantity, price, image } = req.body;
+    const { name, category, quantity, price, image, date } = req.body;
     var game = req.body;
     await GameModel.create(game)
         .then(() => { console.log('Add new game succeed!') });
@@ -31,11 +31,11 @@ router.get('/edit/:id', async (req, res) => {
 })
 
 router.post('/edit/:id', async (req, res) => {
-    const { name, category, quantity, price, image } = req.body;
+    const { name, category, quantity, price, image, date } = req.body;
     var id = req.params.id;
     await GameModel.findByIdAndUpdate(id, {
         name: req.body.name, category: req.body.category, quantity: req.body.quantity,
-        price: req.body.price, image: req.body.image
+        price: req.body.price, date: req.body.date, image: req.body.image
     })
         .then(() => { console.log('Edit game succeed!') });
     res.redirect('/game');

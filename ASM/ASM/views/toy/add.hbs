@@ -9,6 +9,14 @@
       min-height: 100vh;
    }
 
+   .navbar-custom {
+      background-color: #fdcc69;
+   }
+
+   .form-control {
+      border-radius: 5px;
+   }
+
    .form-group.select {
       margin-top: 3rem;
    }
@@ -28,11 +36,39 @@
       border: 1px solid #ced4da;
       border-radius: 0.25rem;
    }
+
+   body {
+      background-color: #f7f5eb;
+   }
 </style>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+   <div class="container">
+      <a class="navbar-brand" href="/"><span>The Toy</span>Box</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" style="padding-right: 30px;" id="navbarSupportedContent">
+         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+               <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/toy">Toy</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/game">Game</a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+
 <div class="center-form">
    <form class="bg-light text-center col-md-8" action="/toy/add" method="post">
       <div>
-         <h1 class="text text-primary">Add new toy</h1>
+         <h1 class="text text-primary">ADD NEW TOY</h1>
       </div>
       <div class="form-group mt-3">
          <label class="text text-success">Name</label>
@@ -42,16 +78,6 @@
          <label class="text text-success">Brand</label>
          <input class="form-control" type="text" name="brand" required>
       </div>
-      {{!-- <div>
-         <label for="dropdown">Select an option:</label>
-         <select id="dropdown" name="category">
-            <option value="Lego">Lego</option>
-            <option value="Figure">Figure</option>
-            <option value="Puzzle">Puzzle</option>
-            <option value="Stuffed Animal">Stuffed Animal</option>
-            <option value="Construction Set">Construction Set</option>
-         </select>
-      </div> --}}
       <div class="form-group mt-3">
          <label class="text text-success">Category</label>
          <input class="form-control" type="text" name="category" required>

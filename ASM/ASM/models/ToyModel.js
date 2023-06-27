@@ -7,7 +7,7 @@ var ToySchema = mongoose.Schema(
       category: String,
       instock: Number,
       price: Number,
-      image: String
+      image: String,
    }
 );
 

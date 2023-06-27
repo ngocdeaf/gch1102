@@ -28,7 +28,40 @@
         border: 1px solid #ced4da;
         border-radius: 0.25rem;
     }
+
+    body {
+        background-color: #f7f5eb;
+        padding-bottom: 30px;
+    }
+
+    .navbar-custom {
+        background-color: #fdcc69;
+    }
 </style>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+    <div class="container">
+        <a class="navbar-brand" href="/"><span>The Toy</span>Box</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" style="padding-right: 30px;" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/toy/">Toy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/game">Game</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <div class="center-form">
     <form class="bg-light text-center col-md-8" action="/game/add" method="post">
         <div>
@@ -40,15 +73,25 @@
         </div>
         <div class="form-group mt-3">
             <label class="text text-success">Category</label>
-            <input class="form-control" type="text" name="category" required>
-        </div>
-        <div class="form-group mt-3">
-            <label class="text text-success">Quantity</label>
-            <input class="form-control" type="number" name="quantity" required>
+            <select class="form-control" name="category">
+                <option value="RPG">RPG</option>
+                <option value="Puzzle">Puzzle</option>
+                <option value="Simulation">Simulation</option>
+                <option value="Sport">Sport</option>
+                <option value="FPS">FPS</option>
+            </select>
         </div>
         <div class="form-group mt-3">
             <label class="text text-success">Price</label>
             <input class="form-control" type="number" name="price" required>
+        </div>
+        <div class="form-group mt-3">
+            <lable class="text text-success">Date</lable>
+            <input class="form-control" type="date" name="date" required>
+        </div>
+        <div class="form-group mt-3">
+            <label class="text text-success">Quantity</label>
+            <input class="form-control" type="number" name="quantity" required>
         </div>
         <div class="form-group mt-3">
             <label class="text text-success">Image</label>

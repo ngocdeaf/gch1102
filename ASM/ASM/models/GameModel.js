@@ -6,7 +6,8 @@ var GameSchema  = mongoose.Schema(
       category : String,
       quantity : Number,
       price: Number,
-      image : String
+      image : String,
+      date : Date
    }
 );
 

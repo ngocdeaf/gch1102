@@ -17,7 +17,7 @@ var app = express();
 
 // 1. Config mongoose
 var mongoose = require('mongoose');
-var uri = "mongodb+srv://Langoc:FNwrjNV4VbZmaAdZ@cluster0.ynout2p.mongodb.net/ASM";
+var uri = "mongodb+srv://langoc1611:rPpF2WQAQ86b2xGq@ngocdeaf.dwjux82.mongodb.net/ASM";
 mongoose.connect(uri)
 .then(() => console.log ('ok'))
 .catch((err) => console.log('fail'));
